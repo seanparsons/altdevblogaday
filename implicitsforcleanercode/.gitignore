@@ -1,0 +1,4 @@
+project/boot/
+target/
+project/plugins/lib_managed
+lib_managed
