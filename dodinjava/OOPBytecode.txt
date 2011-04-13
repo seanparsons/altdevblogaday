@@ -1,0 +1,140 @@
+Compiled from "Vector.java"
+public class com.altdevblogaday.dodinjava.Vector extends java.lang.Object{
+public com.altdevblogaday.dodinjava.Vector(double, double, double);
+  Code:
+   0:	aload_0
+   1:	invokespecial	#1; //Method java/lang/Object."<init>":()V
+   4:	aload_0
+   5:	dload_1
+   6:	putfield	#2; //Field x:D
+   9:	aload_0
+   10:	dload_3
+   11:	putfield	#3; //Field y:D
+   14:	aload_0
+   15:	dload	5
+   17:	putfield	#4; //Field z:D
+   20:	return
+
+public void multiply(double);
+  Code:
+   0:	aload_0
+   1:	dup
+   2:	getfield	#2; //Field x:D
+   5:	dload_1
+   6:	dmul
+   7:	putfield	#2; //Field x:D
+
+   10:	aload_0
+   11:	dup
+   12:	getfield	#3; //Field y:D
+   15:	dload_1
+   16:	dmul
+   17:	putfield	#3; //Field y:D
+
+   20:	aload_0
+   21:	dup
+   22:	getfield	#4; //Field z:D
+   25:	dload_1
+   26:	dmul
+   27:	putfield	#4; //Field z:D
+   30:	return
+
+public double total();
+  Code:
+   0:	aload_0
+   1:	getfield	#2; //Field x:D
+   4:	aload_0
+   5:	getfield	#3; //Field y:D
+   8:	dadd
+   9:	aload_0
+   10:	getfield	#4; //Field z:D
+   13:	dadd
+   14:	dreturn
+
+}
+
+
+Compiled from "OOP.java"
+public class com.altdevblogaday.dodinjava.OOP extends java.lang.Object{
+public com.altdevblogaday.dodinjava.OOP();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#1; //Method java/lang/Object."<init>":()V
+   4:	return
+
+public static void main(java.lang.String[]);
+  Code:
+   0:	ldc	#2; //int 100000
+   2:	anewarray	#3; //class com/altdevblogaday/dodinjava/Vector
+   5:	astore_1
+   6:	iconst_0
+   7:	istore_2
+   8:	iload_2
+   9:	aload_1
+   10:	arraylength
+   11:	if_icmpge	39
+   14:	aload_1
+   15:	iload_2
+   16:	new	#3; //class com/altdevblogaday/dodinjava/Vector
+   19:	dup
+   20:	ldc2_w	#4; //double 1.1d
+   23:	ldc2_w	#6; //double 2.9d
+   26:	ldc2_w	#8; //double 3.4d
+   29:	invokespecial	#10; //Method com/altdevblogaday/dodinjava/Vector."<init>":(DDD)V
+   32:	aastore
+   33:	iinc	2, 1
+   36:	goto	8
+   39:	aload_1
+   40:	invokestatic	#11; //Method multiply:([Lcom/altdevblogaday/dodinjava/Vector;)V
+   43:	getstatic	#12; //Field java/lang/System.out:Ljava/io/PrintStream;
+   46:	aload_1
+   47:	invokestatic	#13; //Method total:([Lcom/altdevblogaday/dodinjava/Vector;)D
+   50:	invokevirtual	#14; //Method java/io/PrintStream.println:(D)V
+   53:	return
+
+public static double total(com.altdevblogaday.dodinjava.Vector[]);
+  Code:
+   0:	dconst_0
+   1:	dstore_1
+   2:	iconst_0
+   3:	istore_3
+   4:	iload_3
+   5:	aload_0
+   6:	arraylength
+   7:	if_icmpge	25
+   10:	dload_1
+   11:	aload_0
+   12:	iload_3
+   13:	aaload
+   14:	invokevirtual	#15; //Method com/altdevblogaday/dodinjava/Vector.total:()D
+   17:	dadd
+   18:	dstore_1
+   19:	iinc	3, 1
+   22:	goto	4
+   25:	dload_1
+   26:	dreturn
+
+public static void multiply(com.altdevblogaday.dodinjava.Vector[]);
+  Code:
+   0:	ldc2_w	#16; //double 2.0d
+   3:	dstore_1
+   4:	iconst_0
+   5:	istore_3
+   6:	iload_3
+   7:	aload_0
+   8:	arraylength
+   9:	if_icmpge	27
+   12:	aload_0
+   13:	iload_3
+   14:	aaload
+   15:	ldc2_w	#16; //double 2.0d
+   18:	invokevirtual	#18; //Method com/altdevblogaday/dodinjava/Vector.multiply:(D)V
+   21:	iinc	3, 1
+   24:	goto	6
+   27:	return
+
+}
+
+
+
+

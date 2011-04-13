@@ -1,0 +1,1276 @@
+VM option '+PrintAssembly'
+Java HotSpot(TM) 64-Bit Server VM warning: PrintAssembly is enabled; turning on DebugNonSafepoints to gain additional output
+Loaded disassembler from hsdis-amd64.so
+Decoding compiled method 0x00007f694140b0d0:
+Code:
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Constants]
+  # {method} '<init>' '(DDD)V' in 'com/altdevblogaday/dodinjava/Vector'
+  # this:     rsi:rsi   = 'com/altdevblogaday/dodinjava/Vector'
+  # parm0:    xmm0:xmm0   = double
+  # parm1:    xmm1:xmm1   = double
+  # parm2:    xmm2:xmm2   = double
+  #           [sp+0x20]  (sp of caller)
+  0x00007f694140b220: mov    0x8(%rsi),%r10d
+  0x00007f694140b224: cmp    %r10,%rax
+  0x00007f694140b227: jne    0x00007f69413e4620  ;   {runtime_call}
+  0x00007f694140b22d: nop    
+  0x00007f694140b22e: nop    
+  0x00007f694140b22f: nop    
+[Verified Entry Point]
+  0x00007f694140b230: push   %rbp
+  0x00007f694140b231: sub    $0x10,%rsp
+  0x00007f694140b235: nop                       ;*synchronization entry
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@-1 (line 10)
+  0x00007f694140b236: movsd  %xmm0,0x10(%rsi)   ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@6 (line 11)
+  0x00007f694140b23b: movsd  %xmm2,0x20(%rsi)   ;*putfield z
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@17 (line 13)
+  0x00007f694140b240: movsd  %xmm1,0x18(%rsi)   ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@11 (line 12)
+  0x00007f694140b245: add    $0x10,%rsp
+  0x00007f694140b249: pop    %rbp
+  0x00007f694140b24a: test   %eax,0x5ca8db0(%rip)        # 0x00007f69470b4000
+                                                ;   {poll_return}
+  0x00007f694140b250: retq   
+  0x00007f694140b251: hlt    
+  0x00007f694140b252: hlt    
+  0x00007f694140b253: hlt    
+  0x00007f694140b254: hlt    
+  0x00007f694140b255: hlt    
+  0x00007f694140b256: hlt    
+  0x00007f694140b257: hlt    
+  0x00007f694140b258: hlt    
+  0x00007f694140b259: hlt    
+  0x00007f694140b25a: hlt    
+  0x00007f694140b25b: hlt    
+  0x00007f694140b25c: hlt    
+  0x00007f694140b25d: hlt    
+  0x00007f694140b25e: hlt    
+  0x00007f694140b25f: hlt    
+[Exception Handler]
+[Stub Code]
+  0x00007f694140b260: jmpq   0x00007f69413f3720  ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f694140b265: callq  0x00007f694140b26a
+  0x00007f694140b26a: subq   $0x5,(%rsp)
+  0x00007f694140b26f: jmpq   0x00007f69413e57e0  ;   {runtime_call}
+  0x00007f694140b274: int3   
+  0x00007f694140b275: int3   
+  0x00007f694140b276: int3   
+  0x00007f694140b277: int3   
+Loaded disassembler from hsdis-amd64.so
+Decoding compiled method 0x00007f694140ae50:
+Code:
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Constants]
+  # {method} '<init>' '()V' in 'java/lang/Object'
+  #           [sp+0x20]  (sp of caller)
+  0x00007f694140afa0: mov    0x8(%rsi),%r10d
+  0x00007f694140afa4: cmp    %r10,%rax
+  0x00007f694140afa7: jne    0x00007f69413e4620  ;   {runtime_call}
+  0x00007f694140afad: nop    
+  0x00007f694140afae: nop    
+  0x00007f694140afaf: nop    
+[Verified Entry Point]
+  0x00007f694140afb0: mov    %eax,-0x8000(%rsp)
+  0x00007f694140afb7: push   %rbp
+  0x00007f694140afb8: sub    $0x10,%rsp         ;*synchronization entry
+                                                ; - java.lang.Object::<init>@-1 (line 20)
+  0x00007f694140afbc: mov    0x8(%rsi),%r10d
+  0x00007f694140afc0: mov    $0x40000000,%r8d
+  0x00007f694140afc6: test   %r8d,0x9c(%r10)
+  0x00007f694140afcd: je     0x00007f694140afd8  ;*return
+                                                ; - java.lang.Object::<init>@0 (line 20)
+  0x00007f694140afcf: mov    %rsi,%rbp
+  0x00007f694140afd2: nop    
+  0x00007f694140afd3: callq  0x00007f694140cc20  ; OopMap{rbp=Oop off=56}
+                                                ;*return
+                                                ; - java.lang.Object::<init>@0 (line 20)
+                                                ;   {runtime_call}
+  0x00007f694140afd8: add    $0x10,%rsp
+  0x00007f694140afdc: pop    %rbp
+  0x00007f694140afdd: test   %eax,0x5ca901d(%rip)        # 0x00007f69470b4000
+                                                ;   {poll_return}
+  0x00007f694140afe3: retq                      ;*return
+                                                ; - java.lang.Object::<init>@0 (line 20)
+  0x00007f694140afe4: mov    %rax,%rsi
+  0x00007f694140afe7: add    $0x10,%rsp
+  0x00007f694140afeb: pop    %rbp
+  0x00007f694140afec: jmpq   0x00007f69414097a0  ;   {runtime_call}
+  0x00007f694140aff1: hlt    
+  0x00007f694140aff2: hlt    
+  0x00007f694140aff3: hlt    
+  0x00007f694140aff4: hlt    
+  0x00007f694140aff5: hlt    
+  0x00007f694140aff6: hlt    
+  0x00007f694140aff7: hlt    
+  0x00007f694140aff8: hlt    
+  0x00007f694140aff9: hlt    
+  0x00007f694140affa: hlt    
+  0x00007f694140affb: hlt    
+  0x00007f694140affc: hlt    
+  0x00007f694140affd: hlt    
+  0x00007f694140affe: hlt    
+  0x00007f694140afff: hlt    
+[Exception Handler]
+[Stub Code]
+  0x00007f694140b000: jmpq   0x00007f69413f3720  ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f694140b005: callq  0x00007f694140b00a
+  0x00007f694140b00a: subq   $0x5,(%rsp)
+  0x00007f694140b00f: jmpq   0x00007f69413e57e0  ;   {runtime_call}
+  0x00007f694140b014: int3   
+  0x00007f694140b015: int3   
+  0x00007f694140b016: int3   
+  0x00007f694140b017: int3   
+Decoding compiled method 0x00007f694140d5d0:
+Code:
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Verified Entry Point]
+[Constants]
+  # {method} 'main' '([Ljava/lang/String;)V' in 'com/altdevblogaday/dodinjava/OOP'
+  0x00007f694140d800: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140d805: nop    
+  0x00007f694140d806: nop    
+  0x00007f694140d807: nop    
+  0x00007f694140d808: nop    
+  0x00007f694140d809: nop    
+  0x00007f694140d80a: nop    
+  0x00007f694140d80b: nop    
+  0x00007f694140d80c: nop    
+  0x00007f694140d80d: nop    
+  0x00007f694140d80e: nop    
+  0x00007f694140d80f: nop    
+  0x00007f694140d810: mov    %eax,-0x8000(%rsp)
+  0x00007f694140d817: push   %rbp
+  0x00007f694140d818: sub    $0x30,%rsp
+  0x00007f694140d81c: mov    (%rsi),%ebx
+  0x00007f694140d81e: mov    0x8(%rsi),%rbp
+  0x00007f694140d822: mov    %rsi,%rdi
+  0x00007f694140d825: mov    $0x7f6946017be0,%r10
+  0x00007f694140d82f: callq  *%r10
+  0x00007f694140d832: mov    0x8(%rbp),%r10d    ; implicit exception: dispatches to 0x00007f694140e011
+  0x00007f694140d836: cmp    $0xbd2b7310,%r10d  ;   {oop('com/altdevblogaday/dodinjava/Vector'[])}
+  0x00007f694140d83d: jne    0x00007f694140dffd  ;*iload_2
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@8 (line 9)
+  0x00007f694140d843: mov    0xc(%rbp),%r8d     ;*arraylength
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@10 (line 9)
+  0x00007f694140d847: cmp    %r8d,%ebx
+  0x00007f694140d84a: jge    0x00007f694140dbbd  ;*if_icmpge
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@11 (line 9)
+  0x00007f694140d850: cmp    %r8d,%ebx
+  0x00007f694140d853: jae    0x00007f694140dfe8
+  0x00007f694140d859: mov    %r8d,%r11d
+  0x00007f694140d85c: dec    %r11d
+  0x00007f694140d85f: cmp    %r8d,%r11d
+  0x00007f694140d862: jae    0x00007f694140dfe8
+  0x00007f694140d868: mov    %ebx,%ecx
+  0x00007f694140d86a: inc    %ecx               ;*aload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@14 (line 11)
+  0x00007f694140d86c: mov    0x70(%r15),%rax
+  0x00007f694140d870: mov    %rax,%r10
+  0x00007f694140d873: add    $0x28,%r10
+  0x00007f694140d877: cmp    0x80(%r15),%r10
+  0x00007f694140d87e: jae    0x00007f694140df89
+  0x00007f694140d884: mov    %r10,0x70(%r15)
+  0x00007f694140d888: prefetchnta 0x100(%r10)
+  0x00007f694140d890: mov    $0xbd2b7040,%r10d  ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140d896: mov    0xb0(%r10),%r10
+  0x00007f694140d89d: mov    %r10,(%rax)
+  0x00007f694140d8a0: movl   $0xbd2b7040,0x8(%rax)  ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140d8a7: mov    %r12d,0xc(%rax)    ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140d8ab: mov    $0x3ff199999999999a,%r10
+  0x00007f694140d8b5: mov    %r10,0x10(%rax)    ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@6 (line 11)
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@29 (line 11)
+  0x00007f694140d8b9: lea    0x10(%rbp,%rbx,4),%r10  ;*aastore
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@32 (line 11)
+  0x00007f694140d8be: mov    $0x4007333333333333,%r11
+  0x00007f694140d8c8: mov    %r11,0x18(%rax)    ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@11 (line 12)
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@29 (line 11)
+  0x00007f694140d8cc: mov    $0x400b333333333333,%r11
+  0x00007f694140d8d6: mov    %r11,0x20(%rax)    ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140d8da: inc    %ebx               ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@33 (line 9)
+  0x00007f694140d8dc: push   %r10
+  0x00007f694140d8de: cmp    0x50f6cbb(%rip),%r12        # 0x00007f69465045a0
+                                                ;   {external_word}
+  0x00007f694140d8e5: je     0x00007f694140d962
+  0x00007f694140d8eb: mov    %rsp,-0x28(%rsp)
+  0x00007f694140d8f0: sub    $0x80,%rsp
+  0x00007f694140d8f7: mov    %rax,0x78(%rsp)
+  0x00007f694140d8fc: mov    %rcx,0x70(%rsp)
+  0x00007f694140d901: mov    %rdx,0x68(%rsp)
+  0x00007f694140d906: mov    %rbx,0x60(%rsp)
+  0x00007f694140d90b: mov    %rbp,0x50(%rsp)
+  0x00007f694140d910: mov    %rsi,0x48(%rsp)
+  0x00007f694140d915: mov    %rdi,0x40(%rsp)
+  0x00007f694140d91a: mov    %r8,0x38(%rsp)
+  0x00007f694140d91f: mov    %r9,0x30(%rsp)
+  0x00007f694140d924: mov    %r10,0x28(%rsp)
+  0x00007f694140d929: mov    %r11,0x20(%rsp)
+  0x00007f694140d92e: mov    %r12,0x18(%rsp)
+  0x00007f694140d933: mov    %r13,0x10(%rsp)
+  0x00007f694140d938: mov    %r14,0x8(%rsp)
+  0x00007f694140d93d: mov    %r15,(%rsp)
+  0x00007f694140d941: mov    $0x7f69461ba8a0,%rdi  ;   {external_word}
+  0x00007f694140d94b: mov    $0x7f694140d8eb,%rsi  ;   {internal_word}
+  0x00007f694140d955: mov    %rsp,%rdx
+  0x00007f694140d958: and    $0xfffffffffffffff0,%rsp
+  0x00007f694140d95c: callq  0x00007f6945786d00  ;   {runtime_call}
+  0x00007f694140d961: hlt    
+  0x00007f694140d962: pop    %r10
+  0x00007f694140d964: test   %rax,%rax
+  0x00007f694140d967: jne    0x00007f694140d9e4
+  0x00007f694140d96d: mov    %rsp,-0x28(%rsp)
+  0x00007f694140d972: sub    $0x80,%rsp
+  0x00007f694140d979: mov    %rax,0x78(%rsp)
+  0x00007f694140d97e: mov    %rcx,0x70(%rsp)
+  0x00007f694140d983: mov    %rdx,0x68(%rsp)
+  0x00007f694140d988: mov    %rbx,0x60(%rsp)
+  0x00007f694140d98d: mov    %rbp,0x50(%rsp)
+  0x00007f694140d992: mov    %rsi,0x48(%rsp)
+  0x00007f694140d997: mov    %rdi,0x40(%rsp)
+  0x00007f694140d99c: mov    %r8,0x38(%rsp)
+  0x00007f694140d9a1: mov    %r9,0x30(%rsp)
+  0x00007f694140d9a6: mov    %r10,0x28(%rsp)
+  0x00007f694140d9ab: mov    %r11,0x20(%rsp)
+  0x00007f694140d9b0: mov    %r12,0x18(%rsp)
+  0x00007f694140d9b5: mov    %r13,0x10(%rsp)
+  0x00007f694140d9ba: mov    %r14,0x8(%rsp)
+  0x00007f694140d9bf: mov    %r15,(%rsp)
+  0x00007f694140d9c3: mov    $0x7f69461ba920,%rdi  ;   {external_word}
+  0x00007f694140d9cd: mov    $0x7f694140d96d,%rsi  ;   {internal_word}
+  0x00007f694140d9d7: mov    %rsp,%rdx
+  0x00007f694140d9da: and    $0xfffffffffffffff0,%rsp
+  0x00007f694140d9de: callq  0x00007f6945786d00  ;   {runtime_call}
+  0x00007f694140d9e3: hlt    
+  0x00007f694140d9e4: mov    %rax,%r9
+  0x00007f694140d9e7: mov    %r9d,(%r10)
+  0x00007f694140d9ea: shr    $0x9,%r10
+  0x00007f694140d9ee: mov    $0x7f6940b16000,%r11
+  0x00007f694140d9f8: mov    %r12b,(%r11,%r10,1)  ;*aastore
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@32 (line 11)
+  0x00007f694140d9fc: cmp    %ecx,%ebx
+  0x00007f694140d9fe: jl     0x00007f694140d86c
+  0x00007f694140da04: mov    %r8d,%r11d
+  0x00007f694140da07: sub    %ebx,%r11d
+  0x00007f694140da0a: and    $0xfffffffffffffffe,%r11d
+  0x00007f694140da0e: add    %ebx,%r11d
+  0x00007f694140da11: cmp    %r11d,%ebx
+  0x00007f694140da14: jl     0x00007f694140dd65
+  0x00007f694140da1a: cmp    %r8d,%ebx
+  0x00007f694140da1d: jge    0x00007f694140dbbd
+  0x00007f694140da23: nop                       ;*aload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@14 (line 11)
+  0x00007f694140da24: mov    0x70(%r15),%rax
+  0x00007f694140da28: mov    %rax,%r10
+  0x00007f694140da2b: add    $0x28,%r10
+  0x00007f694140da2f: cmp    0x80(%r15),%r10
+  0x00007f694140da36: jae    0x00007f694140dfbc
+  0x00007f694140da3c: mov    %r10,0x70(%r15)
+  0x00007f694140da40: prefetchnta 0x100(%r10)
+  0x00007f694140da48: mov    $0xbd2b7040,%r11d  ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140da4e: mov    0xb0(%r11),%r10
+  0x00007f694140da55: mov    %r10,(%rax)
+  0x00007f694140da58: movl   $0xbd2b7040,0x8(%rax)  ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140da5f: mov    %r12d,0xc(%rax)    ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140da63: mov    $0x3ff199999999999a,%r10
+  0x00007f694140da6d: mov    %r10,0x10(%rax)    ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@6 (line 11)
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@29 (line 11)
+  0x00007f694140da71: lea    0x10(%rbp,%rbx,4),%r10  ;*aastore
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@32 (line 11)
+  0x00007f694140da76: mov    $0x4007333333333333,%r11
+  0x00007f694140da80: mov    %r11,0x18(%rax)    ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@11 (line 12)
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@29 (line 11)
+  0x00007f694140da84: mov    $0x400b333333333333,%r11
+  0x00007f694140da8e: mov    %r11,0x20(%rax)    ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140da92: inc    %ebx               ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@33 (line 9)
+  0x00007f694140da94: push   %r10
+  0x00007f694140da96: cmp    0x50f6b03(%rip),%r12        # 0x00007f69465045a0
+                                                ;   {external_word}
+  0x00007f694140da9d: je     0x00007f694140db1a
+  0x00007f694140daa3: mov    %rsp,-0x28(%rsp)
+  0x00007f694140daa8: sub    $0x80,%rsp
+  0x00007f694140daaf: mov    %rax,0x78(%rsp)
+  0x00007f694140dab4: mov    %rcx,0x70(%rsp)
+  0x00007f694140dab9: mov    %rdx,0x68(%rsp)
+  0x00007f694140dabe: mov    %rbx,0x60(%rsp)
+  0x00007f694140dac3: mov    %rbp,0x50(%rsp)
+  0x00007f694140dac8: mov    %rsi,0x48(%rsp)
+  0x00007f694140dacd: mov    %rdi,0x40(%rsp)
+  0x00007f694140dad2: mov    %r8,0x38(%rsp)
+  0x00007f694140dad7: mov    %r9,0x30(%rsp)
+  0x00007f694140dadc: mov    %r10,0x28(%rsp)
+  0x00007f694140dae1: mov    %r11,0x20(%rsp)
+  0x00007f694140dae6: mov    %r12,0x18(%rsp)
+  0x00007f694140daeb: mov    %r13,0x10(%rsp)
+  0x00007f694140daf0: mov    %r14,0x8(%rsp)
+  0x00007f694140daf5: mov    %r15,(%rsp)
+  0x00007f694140daf9: mov    $0x7f69461ba8a0,%rdi  ;   {external_word}
+  0x00007f694140db03: mov    $0x7f694140daa3,%rsi  ;   {internal_word}
+  0x00007f694140db0d: mov    %rsp,%rdx
+  0x00007f694140db10: and    $0xfffffffffffffff0,%rsp
+  0x00007f694140db14: callq  0x00007f6945786d00  ;   {runtime_call}
+  0x00007f694140db19: hlt    
+  0x00007f694140db1a: pop    %r10
+  0x00007f694140db1c: test   %rax,%rax
+  0x00007f694140db1f: jne    0x00007f694140db9c
+  0x00007f694140db25: mov    %rsp,-0x28(%rsp)
+  0x00007f694140db2a: sub    $0x80,%rsp
+  0x00007f694140db31: mov    %rax,0x78(%rsp)
+  0x00007f694140db36: mov    %rcx,0x70(%rsp)
+  0x00007f694140db3b: mov    %rdx,0x68(%rsp)
+  0x00007f694140db40: mov    %rbx,0x60(%rsp)
+  0x00007f694140db45: mov    %rbp,0x50(%rsp)
+  0x00007f694140db4a: mov    %rsi,0x48(%rsp)
+  0x00007f694140db4f: mov    %rdi,0x40(%rsp)
+  0x00007f694140db54: mov    %r8,0x38(%rsp)
+  0x00007f694140db59: mov    %r9,0x30(%rsp)
+  0x00007f694140db5e: mov    %r10,0x28(%rsp)
+  0x00007f694140db63: mov    %r11,0x20(%rsp)
+  0x00007f694140db68: mov    %r12,0x18(%rsp)
+  0x00007f694140db6d: mov    %r13,0x10(%rsp)
+  0x00007f694140db72: mov    %r14,0x8(%rsp)
+  0x00007f694140db77: mov    %r15,(%rsp)
+  0x00007f694140db7b: mov    $0x7f69461ba920,%rdi  ;   {external_word}
+  0x00007f694140db85: mov    $0x7f694140db25,%rsi  ;   {internal_word}
+  0x00007f694140db8f: mov    %rsp,%rdx
+  0x00007f694140db92: and    $0xfffffffffffffff0,%rsp
+  0x00007f694140db96: callq  0x00007f6945786d00  ;   {runtime_call}
+  0x00007f694140db9b: hlt    
+  0x00007f694140db9c: mov    %rax,%r9
+  0x00007f694140db9f: mov    %r9d,(%r10)
+  0x00007f694140dba2: shr    $0x9,%r10
+  0x00007f694140dba6: mov    $0x7f6940b16000,%r11
+  0x00007f694140dbb0: mov    %r12b,(%r11,%r10,1)  ;*aastore
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@32 (line 11)
+  0x00007f694140dbb4: cmp    %r8d,%ebx
+  0x00007f694140dbb7: jl     0x00007f694140da24  ;*if_icmpge
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@11 (line 9)
+  0x00007f694140dbbd: mov    %rbp,%rsi
+  0x00007f694140dbc0: nop    
+  0x00007f694140dbc1: nop    
+  0x00007f694140dbc2: nop    
+  0x00007f694140dbc3: callq  0x00007f69413e4c20  ; OopMap{rbp=Oop off=968}
+                                                ;*invokestatic multiply
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@40 (line 13)
+                                                ;   {static_call}
+  0x00007f694140dbc8: mov    $0x31,%esi
+  0x00007f694140dbcd: nop    
+  0x00007f694140dbce: nop    
+  0x00007f694140dbcf: callq  0x00007f69413e3ea0  ; OopMap{rbp=Oop off=980}
+                                                ;*getstatic out
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@43 (line 14)
+                                                ;   {runtime_call}
+  0x00007f694140dbd4: callq  0x00007f6945f2ade0  ;*getstatic out
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@43 (line 14)
+                                                ;   {runtime_call}
+  0x00007f694140dbd9: nop    
+  0x00007f694140dbda: nop    
+  0x00007f694140dbdb: nop    
+  0x00007f694140dbdc: nop    
+  0x00007f694140dbdd: nop    
+  0x00007f694140dbde: nop    
+  0x00007f694140dbdf: nop    
+  0x00007f694140dbe0: mov    %r10,0x70(%r15)
+  0x00007f694140dbe4: prefetchnta 0x100(%r10)
+  0x00007f694140dbec: mov    $0xbd2b7040,%r10d  ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140dbf2: mov    0xb0(%r10),%r10
+  0x00007f694140dbf9: mov    %r10,(%rax)
+  0x00007f694140dbfc: movl   $0xbd2b7040,0x8(%rax)  ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140dc03: mov    %r12d,0xc(%rax)    ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140dc07: mov    $0x3ff199999999999a,%r10
+  0x00007f694140dc11: mov    %r10,0x10(%rax)    ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@6 (line 11)
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@29 (line 11)
+  0x00007f694140dc15: mov    $0x4007333333333333,%r10
+  0x00007f694140dc1f: mov    %r10,0x18(%rax)    ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@11 (line 12)
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@29 (line 11)
+  0x00007f694140dc23: mov    $0x400b333333333333,%r10
+  0x00007f694140dc2d: mov    %r10,0x20(%rax)    ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140dc31: movslq %ebx,%r10
+  0x00007f694140dc34: lea    0x14(%rbp,%r10,4),%r10
+  0x00007f694140dc39: push   %r10
+  0x00007f694140dc3b: cmp    0x50f695e(%rip),%r12        # 0x00007f69465045a0
+                                                ;   {external_word}
+  0x00007f694140dc42: je     0x00007f694140dcbf
+  0x00007f694140dc48: mov    %rsp,-0x28(%rsp)
+  0x00007f694140dc4d: sub    $0x80,%rsp
+  0x00007f694140dc54: mov    %rax,0x78(%rsp)
+  0x00007f694140dc59: mov    %rcx,0x70(%rsp)
+  0x00007f694140dc5e: mov    %rdx,0x68(%rsp)
+  0x00007f694140dc63: mov    %rbx,0x60(%rsp)
+  0x00007f694140dc68: mov    %rbp,0x50(%rsp)
+  0x00007f694140dc6d: mov    %rsi,0x48(%rsp)
+  0x00007f694140dc72: mov    %rdi,0x40(%rsp)
+  0x00007f694140dc77: mov    %r8,0x38(%rsp)
+  0x00007f694140dc7c: mov    %r9,0x30(%rsp)
+  0x00007f694140dc81: mov    %r10,0x28(%rsp)
+  0x00007f694140dc86: mov    %r11,0x20(%rsp)
+  0x00007f694140dc8b: mov    %r12,0x18(%rsp)
+  0x00007f694140dc90: mov    %r13,0x10(%rsp)
+  0x00007f694140dc95: mov    %r14,0x8(%rsp)
+  0x00007f694140dc9a: mov    %r15,(%rsp)
+  0x00007f694140dc9e: mov    $0x7f69461ba8a0,%rdi  ;   {external_word}
+  0x00007f694140dca8: mov    $0x7f694140dc48,%rsi  ;   {internal_word}
+  0x00007f694140dcb2: mov    %rsp,%rdx
+  0x00007f694140dcb5: and    $0xfffffffffffffff0,%rsp
+  0x00007f694140dcb9: callq  0x00007f6945786d00  ;   {runtime_call}
+  0x00007f694140dcbe: hlt    
+  0x00007f694140dcbf: pop    %r10
+  0x00007f694140dcc1: test   %rax,%rax
+  0x00007f694140dcc4: jne    0x00007f694140dd41
+  0x00007f694140dcca: mov    %rsp,-0x28(%rsp)
+  0x00007f694140dccf: sub    $0x80,%rsp
+  0x00007f694140dcd6: mov    %rax,0x78(%rsp)
+  0x00007f694140dcdb: mov    %rcx,0x70(%rsp)
+  0x00007f694140dce0: mov    %rdx,0x68(%rsp)
+  0x00007f694140dce5: mov    %rbx,0x60(%rsp)
+  0x00007f694140dcea: mov    %rbp,0x50(%rsp)
+  0x00007f694140dcef: mov    %rsi,0x48(%rsp)
+  0x00007f694140dcf4: mov    %rdi,0x40(%rsp)
+  0x00007f694140dcf9: mov    %r8,0x38(%rsp)
+  0x00007f694140dcfe: mov    %r9,0x30(%rsp)
+  0x00007f694140dd03: mov    %r10,0x28(%rsp)
+  0x00007f694140dd08: mov    %r11,0x20(%rsp)
+  0x00007f694140dd0d: mov    %r12,0x18(%rsp)
+  0x00007f694140dd12: mov    %r13,0x10(%rsp)
+  0x00007f694140dd17: mov    %r14,0x8(%rsp)
+  0x00007f694140dd1c: mov    %r15,(%rsp)
+  0x00007f694140dd20: mov    $0x7f69461ba920,%rdi  ;   {external_word}
+  0x00007f694140dd2a: mov    $0x7f694140dcca,%rsi  ;   {internal_word}
+  0x00007f694140dd34: mov    %rsp,%rdx
+  0x00007f694140dd37: and    $0xfffffffffffffff0,%rsp
+  0x00007f694140dd3b: callq  0x00007f6945786d00  ;   {runtime_call}
+  0x00007f694140dd40: hlt    
+  0x00007f694140dd41: mov    %rax,%r9
+  0x00007f694140dd44: mov    %r9d,(%r10)        ;*aastore
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@32 (line 11)
+  0x00007f694140dd47: add    $0x2,%ebx          ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@33 (line 9)
+  0x00007f694140dd4a: shr    $0x9,%r10
+  0x00007f694140dd4e: mov    $0x7f6940b16000,%r9
+  0x00007f694140dd58: mov    %r12b,(%r9,%r10,1)  ;*aastore
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@32 (line 11)
+  0x00007f694140dd5c: cmp    %r11d,%ebx
+  0x00007f694140dd5f: jge    0x00007f694140da1a  ;*aload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@14 (line 11)
+  0x00007f694140dd65: mov    0x70(%r15),%rax
+  0x00007f694140dd69: mov    %rax,%r10
+  0x00007f694140dd6c: add    $0x28,%r10
+  0x00007f694140dd70: cmp    0x80(%r15),%r10
+  0x00007f694140dd77: jae    0x00007f694140df54
+  0x00007f694140dd7d: mov    %r10,0x70(%r15)
+  0x00007f694140dd81: prefetchnta 0x100(%r10)
+  0x00007f694140dd89: mov    $0xbd2b7040,%r9d   ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140dd8f: mov    0xb0(%r9),%r10
+  0x00007f694140dd96: mov    %r10,(%rax)
+  0x00007f694140dd99: movl   $0xbd2b7040,0x8(%rax)  ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140dda0: mov    %r12d,0xc(%rax)    ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140dda4: mov    $0x3ff199999999999a,%r10
+  0x00007f694140ddae: mov    %r10,0x10(%rax)    ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@6 (line 11)
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@29 (line 11)
+  0x00007f694140ddb2: lea    0x10(%rbp,%rbx,4),%r10  ;*aastore
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@32 (line 11)
+  0x00007f694140ddb7: mov    $0x4007333333333333,%r9
+  0x00007f694140ddc1: mov    %r9,0x18(%rax)     ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::<init>@11 (line 12)
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@29 (line 11)
+  0x00007f694140ddc5: mov    $0x400b333333333333,%r9
+  0x00007f694140ddcf: mov    %r9,0x20(%rax)     ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140ddd3: mov    %r10,%r9
+  0x00007f694140ddd6: push   %r10
+  0x00007f694140ddd8: cmp    0x50f67c1(%rip),%r12        # 0x00007f69465045a0
+                                                ;   {external_word}
+  0x00007f694140dddf: je     0x00007f694140de5c
+  0x00007f694140dde5: mov    %rsp,-0x28(%rsp)
+  0x00007f694140ddea: sub    $0x80,%rsp
+  0x00007f694140ddf1: mov    %rax,0x78(%rsp)
+  0x00007f694140ddf6: mov    %rcx,0x70(%rsp)
+  0x00007f694140ddfb: mov    %rdx,0x68(%rsp)
+  0x00007f694140de00: mov    %rbx,0x60(%rsp)
+  0x00007f694140de05: mov    %rbp,0x50(%rsp)
+  0x00007f694140de0a: mov    %rsi,0x48(%rsp)
+  0x00007f694140de0f: mov    %rdi,0x40(%rsp)
+  0x00007f694140de14: mov    %r8,0x38(%rsp)
+  0x00007f694140de19: mov    %r9,0x30(%rsp)
+  0x00007f694140de1e: mov    %r10,0x28(%rsp)
+  0x00007f694140de23: mov    %r11,0x20(%rsp)
+  0x00007f694140de28: mov    %r12,0x18(%rsp)
+  0x00007f694140de2d: mov    %r13,0x10(%rsp)
+  0x00007f694140de32: mov    %r14,0x8(%rsp)
+  0x00007f694140de37: mov    %r15,(%rsp)
+  0x00007f694140de3b: mov    $0x7f69461ba8a0,%rdi  ;   {external_word}
+  0x00007f694140de45: mov    $0x7f694140dde5,%rsi  ;   {internal_word}
+  0x00007f694140de4f: mov    %rsp,%rdx
+  0x00007f694140de52: and    $0xfffffffffffffff0,%rsp
+  0x00007f694140de56: callq  0x00007f6945786d00  ;   {runtime_call}
+  0x00007f694140de5b: hlt    
+  0x00007f694140de5c: pop    %r10
+  0x00007f694140de5e: test   %rax,%rax
+  0x00007f694140de61: jne    0x00007f694140dede
+  0x00007f694140de67: mov    %rsp,-0x28(%rsp)
+  0x00007f694140de6c: sub    $0x80,%rsp
+  0x00007f694140de73: mov    %rax,0x78(%rsp)
+  0x00007f694140de78: mov    %rcx,0x70(%rsp)
+  0x00007f694140de7d: mov    %rdx,0x68(%rsp)
+  0x00007f694140de82: mov    %rbx,0x60(%rsp)
+  0x00007f694140de87: mov    %rbp,0x50(%rsp)
+  0x00007f694140de8c: mov    %rsi,0x48(%rsp)
+  0x00007f694140de91: mov    %rdi,0x40(%rsp)
+  0x00007f694140de96: mov    %r8,0x38(%rsp)
+  0x00007f694140de9b: mov    %r9,0x30(%rsp)
+  0x00007f694140dea0: mov    %r10,0x28(%rsp)
+  0x00007f694140dea5: mov    %r11,0x20(%rsp)
+  0x00007f694140deaa: mov    %r12,0x18(%rsp)
+  0x00007f694140deaf: mov    %r13,0x10(%rsp)
+  0x00007f694140deb4: mov    %r14,0x8(%rsp)
+  0x00007f694140deb9: mov    %r15,(%rsp)
+  0x00007f694140debd: mov    $0x7f69461ba920,%rdi  ;   {external_word}
+  0x00007f694140dec7: mov    $0x7f694140de67,%rsi  ;   {internal_word}
+  0x00007f694140ded1: mov    %rsp,%rdx
+  0x00007f694140ded4: and    $0xfffffffffffffff0,%rsp
+  0x00007f694140ded8: callq  0x00007f6945786d00  ;   {runtime_call}
+  0x00007f694140dedd: hlt    
+  0x00007f694140dede: mov    %rax,%rdi
+  0x00007f694140dee1: mov    %edi,(%r10)
+  0x00007f694140dee4: shr    $0x9,%r9
+  0x00007f694140dee8: mov    $0x7f6940b16000,%r10
+  0x00007f694140def2: mov    %r12b,(%r10,%r9,1)  ;*aastore
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@32 (line 11)
+  0x00007f694140def6: mov    0x70(%r15),%rax
+  0x00007f694140defa: mov    %rax,%r10
+  0x00007f694140defd: add    $0x28,%r10
+  0x00007f694140df01: cmp    0x80(%r15),%r10
+  0x00007f694140df08: jb     0x00007f694140dbe0
+  0x00007f694140df0e: mov    %r11d,0x14(%rsp)
+  0x00007f694140df13: mov    %r8d,0x10(%rsp)
+  0x00007f694140df18: mov    %rbp,0x8(%rsp)     ;*aload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@14 (line 11)
+  0x00007f694140df1d: mov    %ebx,%r10d
+  0x00007f694140df20: mov    %ebx,0x4(%rsp)
+  0x00007f694140df24: inc    %r10d              ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@33 (line 9)
+  0x00007f694140df27: mov    %r10d,(%rsp)
+  0x00007f694140df2b: mov    $0xbd2b7040,%rsi   ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140df35: nop    
+  0x00007f694140df36: nop    
+  0x00007f694140df37: callq  0x00007f6941409ee0  ; OopMap{[8]=Oop off=1852}
+                                                ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+                                                ;   {runtime_call}
+  0x00007f694140df3c: mov    0x4(%rsp),%ebx
+  0x00007f694140df40: mov    0x8(%rsp),%rbp
+  0x00007f694140df45: mov    0x10(%rsp),%r8d
+  0x00007f694140df4a: mov    0x14(%rsp),%r11d
+  0x00007f694140df4f: jmpq   0x00007f694140dc07
+  0x00007f694140df54: mov    %r11d,0xc(%rsp)
+  0x00007f694140df59: mov    %r8d,0x8(%rsp)
+  0x00007f694140df5e: mov    %rbp,(%rsp)
+  0x00007f694140df62: mov    %ebx,%ebp          ;*aload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@14 (line 11)
+  0x00007f694140df64: mov    $0xbd2b7040,%rsi   ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140df6e: nop    
+  0x00007f694140df6f: callq  0x00007f6941409ee0  ; OopMap{[0]=Oop off=1908}
+                                                ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+                                                ;   {runtime_call}
+  0x00007f694140df74: mov    %ebp,%ebx
+  0x00007f694140df76: mov    (%rsp),%rbp
+  0x00007f694140df7a: mov    0x8(%rsp),%r8d
+  0x00007f694140df7f: mov    0xc(%rsp),%r11d
+  0x00007f694140df84: jmpq   0x00007f694140dda4
+  0x00007f694140df89: mov    %ecx,0xc(%rsp)
+  0x00007f694140df8d: mov    %r8d,0x8(%rsp)
+  0x00007f694140df92: mov    %rbp,(%rsp)
+  0x00007f694140df96: mov    %ebx,%ebp          ;*aload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@14 (line 11)
+  0x00007f694140df98: mov    $0xbd2b7040,%rsi   ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140dfa2: nop    
+  0x00007f694140dfa3: callq  0x00007f6941409ee0  ; OopMap{[0]=Oop off=1960}
+                                                ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+                                                ;   {runtime_call}
+  0x00007f694140dfa8: mov    %ebp,%ebx
+  0x00007f694140dfaa: mov    (%rsp),%rbp
+  0x00007f694140dfae: mov    0x8(%rsp),%r8d
+  0x00007f694140dfb3: mov    0xc(%rsp),%ecx
+  0x00007f694140dfb7: jmpq   0x00007f694140d8ab
+  0x00007f694140dfbc: mov    %r8d,0x8(%rsp)
+  0x00007f694140dfc1: mov    %rbp,(%rsp)
+  0x00007f694140dfc5: mov    %ebx,%ebp          ;*aload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@14 (line 11)
+  0x00007f694140dfc7: mov    $0xbd2b7040,%rsi   ;   {oop('com/altdevblogaday/dodinjava/Vector')}
+  0x00007f694140dfd1: nop    
+  0x00007f694140dfd2: nop    
+  0x00007f694140dfd3: callq  0x00007f6941409ee0  ; OopMap{[0]=Oop off=2008}
+                                                ;*new  ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+                                                ;   {runtime_call}
+  0x00007f694140dfd8: mov    %ebp,%ebx
+  0x00007f694140dfda: mov    (%rsp),%rbp
+  0x00007f694140dfde: mov    0x8(%rsp),%r8d
+  0x00007f694140dfe3: jmpq   0x00007f694140da63
+  0x00007f694140dfe8: mov    $0xffffff86,%esi
+  0x00007f694140dfed: mov    %ebx,(%rsp)
+  0x00007f694140dff0: nop    
+  0x00007f694140dff1: nop    
+  0x00007f694140dff2: nop    
+  0x00007f694140dff3: callq  0x00007f69413e3ea0  ; OopMap{rbp=Oop off=2040}
+                                                ;*aload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@14 (line 11)
+                                                ;   {runtime_call}
+  0x00007f694140dff8: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140dffd: mov    $0xffffffad,%esi
+  0x00007f694140e002: mov    %ebx,(%rsp)
+  0x00007f694140e005: nop    
+  0x00007f694140e006: nop    
+  0x00007f694140e007: callq  0x00007f69413e3ea0  ; OopMap{rbp=Oop off=2060}
+                                                ;*iload_2
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@8 (line 9)
+                                                ;   {runtime_call}
+  0x00007f694140e00c: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140e011: mov    $0xfffffff6,%esi
+  0x00007f694140e016: nop    
+  0x00007f694140e017: callq  0x00007f69413e3ea0  ; OopMap{off=2076}
+                                                ;*arraylength
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@10 (line 9)
+                                                ;   {runtime_call}
+  0x00007f694140e01c: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140e021: jmp    0x00007f694140e02c  ;*new
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+  0x00007f694140e023: jmp    0x00007f694140e02c
+  0x00007f694140e025: mov    %rax,%rsi
+  0x00007f694140e028: jmp    0x00007f694140e02f
+  0x00007f694140e02a: jmp    0x00007f694140e02c
+  0x00007f694140e02c: mov    %rax,%rsi          ;*invokestatic multiply
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@40 (line 13)
+  0x00007f694140e02f: add    $0x30,%rsp
+  0x00007f694140e033: pop    %rbp
+  0x00007f694140e034: jmpq   0x00007f69414097a0  ;*new
+                                                ; - com.altdevblogaday.dodinjava.OOP::main@16 (line 11)
+                                                ;   {runtime_call}
+  0x00007f694140e039: hlt    
+  0x00007f694140e03a: hlt    
+  0x00007f694140e03b: hlt    
+  0x00007f694140e03c: hlt    
+  0x00007f694140e03d: hlt    
+  0x00007f694140e03e: hlt    
+  0x00007f694140e03f: hlt    
+[Stub Code]
+  0x00007f694140e040: mov    $0x0,%rbx          ;   {no_reloc}
+  0x00007f694140e04a: jmpq   0x00007f694140e04a  ;   {runtime_call}
+[Exception Handler]
+  0x00007f694140e04f: jmpq   0x00007f69413f3720  ;   {runtime_call}
+[Deopt Handler Code]
+  0x00007f694140e054: callq  0x00007f694140e059
+  0x00007f694140e059: subq   $0x5,(%rsp)
+  0x00007f694140e05e: jmpq   0x00007f69413e57e0  ;   {runtime_call}
+  0x00007f694140e063: int3   
+  0x00007f694140e064: int3   
+  0x00007f694140e065: int3   
+  0x00007f694140e066: int3   
+  0x00007f694140e067: int3   
+Decoding compiled method 0x00007f694140ead0:
+Code:
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Constants]
+  # {method} 'multiply' '(D)V' in 'com/altdevblogaday/dodinjava/Vector'
+  # this:     rsi:rsi   = 'com/altdevblogaday/dodinjava/Vector'
+  # parm0:    xmm0:xmm0   = double
+  #           [sp+0x20]  (sp of caller)
+  0x00007f694140ec20: mov    0x8(%rsi),%r10d
+  0x00007f694140ec24: cmp    %r10,%rax
+  0x00007f694140ec27: jne    0x00007f69413e4620  ;   {runtime_call}
+  0x00007f694140ec2d: nop    
+  0x00007f694140ec2e: nop    
+  0x00007f694140ec2f: nop    
+[Verified Entry Point]
+  0x00007f694140ec30: push   %rbp
+  0x00007f694140ec31: sub    $0x10,%rsp
+  0x00007f694140ec35: nop                       ;*synchronization entry
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@-1 (line 18)
+  0x00007f694140ec36: movapd %xmm0,%xmm1
+  0x00007f694140ec3a: mulsd  0x20(%rsi),%xmm1
+  0x00007f694140ec3f: movapd %xmm0,%xmm2
+  0x00007f694140ec43: mulsd  0x10(%rsi),%xmm2
+  0x00007f694140ec48: movsd  %xmm1,0x20(%rsi)   ;*putfield z
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@27 (line 20)
+  0x00007f694140ec4d: movsd  %xmm2,0x10(%rsi)   ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@7 (line 18)
+  0x00007f694140ec52: mulsd  0x18(%rsi),%xmm0
+  0x00007f694140ec57: movsd  %xmm0,0x18(%rsi)   ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@17 (line 19)
+  0x00007f694140ec5c: add    $0x10,%rsp
+  0x00007f694140ec60: pop    %rbp
+  0x00007f694140ec61: test   %eax,0x5ca5399(%rip)        # 0x00007f69470b4000
+                                                ;   {poll_return}
+  0x00007f694140ec67: retq   
+  0x00007f694140ec68: hlt    
+  0x00007f694140ec69: hlt    
+  0x00007f694140ec6a: hlt    
+  0x00007f694140ec6b: hlt    
+  0x00007f694140ec6c: hlt    
+  0x00007f694140ec6d: hlt    
+  0x00007f694140ec6e: hlt    
+  0x00007f694140ec6f: hlt    
+  0x00007f694140ec70: hlt    
+  0x00007f694140ec71: hlt    
+  0x00007f694140ec72: hlt    
+  0x00007f694140ec73: hlt    
+  0x00007f694140ec74: hlt    
+  0x00007f694140ec75: hlt    
+  0x00007f694140ec76: hlt    
+  0x00007f694140ec77: hlt    
+  0x00007f694140ec78: hlt    
+  0x00007f694140ec79: hlt    
+  0x00007f694140ec7a: hlt    
+  0x00007f694140ec7b: hlt    
+  0x00007f694140ec7c: hlt    
+  0x00007f694140ec7d: hlt    
+  0x00007f694140ec7e: hlt    
+  0x00007f694140ec7f: hlt    
+[Exception Handler]
+[Stub Code]
+  0x00007f694140ec80: jmpq   0x00007f69413f3720  ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f694140ec85: callq  0x00007f694140ec8a
+  0x00007f694140ec8a: subq   $0x5,(%rsp)
+  0x00007f694140ec8f: jmpq   0x00007f69413e57e0  ;   {runtime_call}
+  0x00007f694140ec94: int3   
+  0x00007f694140ec95: int3   
+  0x00007f694140ec96: int3   
+  0x00007f694140ec97: int3   
+Decoding compiled method 0x00007f694140ce10:
+Code:
+[Constants]
+  0x00007f694140cf80 (offset:    0): 0x00000000   0x4000000000000000
+  0x00007f694140cf84 (offset:    4): 0x40000000
+  0x00007f694140cf88 (offset:    8): 0xf4f4f4f4   0xf4f4f4f4f4f4f4f4
+  0x00007f694140cf8c (offset:   12): 0xf4f4f4f4
+  0x00007f694140cf90 (offset:   16): 0xf4f4f4f4   0xf4f4f4f4f4f4f4f4
+  0x00007f694140cf94 (offset:   20): 0xf4f4f4f4
+  0x00007f694140cf98 (offset:   24): 0xf4f4f4f4   0xf4f4f4f4f4f4f4f4
+  0x00007f694140cf9c (offset:   28): 0xf4f4f4f4
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Verified Entry Point]
+  # {method} 'multiply' '([Lcom/altdevblogaday/dodinjava/Vector;)V' in 'com/altdevblogaday/dodinjava/OOP'
+  0x00007f694140cfa0: callq  0x00007f6945f2ade0  ;   {no_reloc}
+  0x00007f694140cfa5: nop    
+  0x00007f694140cfa6: nop    
+  0x00007f694140cfa7: nop    
+  0x00007f694140cfa8: nop    
+  0x00007f694140cfa9: nop    
+  0x00007f694140cfaa: nop    
+  0x00007f694140cfab: nop    
+  0x00007f694140cfac: nop    
+  0x00007f694140cfad: nop    
+  0x00007f694140cfae: nop    
+  0x00007f694140cfaf: nop    
+  0x00007f694140cfb0: mov    %eax,-0x8000(%rsp)
+  0x00007f694140cfb7: push   %rbp
+  0x00007f694140cfb8: sub    $0x20,%rsp
+  0x00007f694140cfbc: rex mov    (%rsi),%ebp
+  0x00007f694140cfbf: mov    0x18(%rsi),%rbx
+  0x00007f694140cfc3: mov    %rsi,%rdi
+  0x00007f694140cfc6: mov    $0x7f6946017be0,%r10
+  0x00007f694140cfd0: callq  *%r10
+  0x00007f694140cfd3: mov    0x8(%rbx),%r10d    ; implicit exception: dispatches to 0x00007f694140d1d5
+  0x00007f694140cfd7: cmp    $0xbd2b7310,%r10d  ;   {oop('com/altdevblogaday/dodinjava/Vector'[])}
+  0x00007f694140cfde: jne    0x00007f694140d1b1  ;*iload_3
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@6 (line 30)
+  0x00007f694140cfe4: mov    0xc(%rbx),%r9d     ;*arraylength
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@8 (line 30)
+  0x00007f694140cfe8: cmp    %r9d,%ebp
+  0x00007f694140cfeb: jge    0x00007f694140d190  ;*if_icmpge
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@9 (line 30)
+  0x00007f694140cff1: cmp    %r9d,%ebp
+  0x00007f694140cff4: jae    0x00007f694140d19c
+  0x00007f694140cffa: mov    %r9d,%r10d
+  0x00007f694140cffd: dec    %r10d
+  0x00007f694140d000: cmp    %r9d,%r10d
+  0x00007f694140d003: jae    0x00007f694140d19c
+  0x00007f694140d009: mov    %ebp,%r11d
+  0x00007f694140d00c: inc    %r11d
+  0x00007f694140d00f: movsd  -0x97(%rip),%xmm2        # 0x00007f694140cf80
+                                                ;*aload_0
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@12 (line 32)
+                                                ;   {section_word}
+  0x00007f694140d017: mov    0x10(%rbx,%rbp,4),%r8d  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@14 (line 32)
+  0x00007f694140d01c: movapd %xmm2,%xmm0
+  0x00007f694140d020: mulsd  0x10(%r8),%xmm0    ; implicit exception: dispatches to 0x00007f694140d1c5
+  0x00007f694140d026: movsd  %xmm0,0x10(%r8)    ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@7 (line 18)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d02c: movapd %xmm2,%xmm0
+  0x00007f694140d030: mulsd  0x18(%r8),%xmm0
+  0x00007f694140d036: movapd %xmm2,%xmm1
+  0x00007f694140d03a: mulsd  0x20(%r8),%xmm1
+  0x00007f694140d040: movsd  %xmm0,0x18(%r8)    ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@17 (line 19)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d046: movsd  %xmm1,0x20(%r8)    ;*putfield z
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@27 (line 20)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d04c: inc    %ebp               ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@21 (line 30)
+  0x00007f694140d04e: cmp    %r11d,%ebp
+  0x00007f694140d051: jl     0x00007f694140d017
+  0x00007f694140d053: mov    %r9d,%r10d
+  0x00007f694140d056: sub    %ebp,%r10d
+  0x00007f694140d059: and    $0xfffffffffffffffc,%r10d
+  0x00007f694140d05d: add    %ebp,%r10d
+  0x00007f694140d060: cmp    %r10d,%ebp
+  0x00007f694140d063: jge    0x00007f694140d14d
+  0x00007f694140d069: nop    
+  0x00007f694140d06a: nop    
+  0x00007f694140d06b: nop    
+  0x00007f694140d06c: nop    
+  0x00007f694140d06d: nop    
+  0x00007f694140d06e: nop    
+  0x00007f694140d06f: nop                       ;*aload_0
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@12 (line 32)
+  0x00007f694140d070: mov    0x10(%rbx,%rbp,4),%r8d  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@14 (line 32)
+  0x00007f694140d075: movapd %xmm2,%xmm0
+  0x00007f694140d079: mulsd  0x10(%r8),%xmm0    ; implicit exception: dispatches to 0x00007f694140d1c5
+  0x00007f694140d07f: movsd  %xmm0,0x10(%r8)    ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@7 (line 18)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d085: movapd %xmm2,%xmm0
+  0x00007f694140d089: mulsd  0x18(%r8),%xmm0
+  0x00007f694140d08f: movapd %xmm2,%xmm1
+  0x00007f694140d093: mulsd  0x20(%r8),%xmm1
+  0x00007f694140d099: movsd  %xmm0,0x18(%r8)    ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@17 (line 19)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d09f: movsd  %xmm1,0x20(%r8)    ;*putfield z
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@27 (line 20)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d0a5: movslq %ebp,%r11
+  0x00007f694140d0a8: mov    0x14(%rbx,%r11,4),%r8d  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@14 (line 32)
+  0x00007f694140d0ad: movapd %xmm2,%xmm0
+  0x00007f694140d0b1: mulsd  0x10(%r8),%xmm0    ; implicit exception: dispatches to 0x00007f694140d1c5
+  0x00007f694140d0b7: movsd  %xmm0,0x10(%r8)    ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@7 (line 18)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d0bd: mov    0x18(%rbx,%r11,4),%ecx  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@14 (line 32)
+  0x00007f694140d0c2: movapd %xmm2,%xmm0
+  0x00007f694140d0c6: mulsd  0x20(%r8),%xmm0
+  0x00007f694140d0cc: movapd %xmm2,%xmm1
+  0x00007f694140d0d0: mulsd  0x18(%r8),%xmm1
+  0x00007f694140d0d6: movsd  %xmm0,0x20(%r8)    ;*putfield z
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@27 (line 20)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d0dc: movsd  %xmm1,0x18(%r8)    ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@17 (line 19)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d0e2: movapd %xmm2,%xmm0
+  0x00007f694140d0e6: mulsd  0x10(%rcx),%xmm0   ; implicit exception: dispatches to 0x00007f694140d1c5
+  0x00007f694140d0eb: movsd  %xmm0,0x10(%rcx)   ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@7 (line 18)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d0f0: mov    0x1c(%rbx,%r11,4),%r8d  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@14 (line 32)
+  0x00007f694140d0f5: movapd %xmm2,%xmm0
+  0x00007f694140d0f9: mulsd  0x20(%rcx),%xmm0
+  0x00007f694140d0fe: movapd %xmm2,%xmm1
+  0x00007f694140d102: mulsd  0x18(%rcx),%xmm1
+  0x00007f694140d107: movsd  %xmm0,0x20(%rcx)   ;*putfield z
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@27 (line 20)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d10c: movsd  %xmm1,0x18(%rcx)   ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@17 (line 19)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d111: movapd %xmm2,%xmm0
+  0x00007f694140d115: mulsd  0x10(%r8),%xmm0    ; implicit exception: dispatches to 0x00007f694140d1c5
+  0x00007f694140d11b: movsd  %xmm0,0x10(%r8)    ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@7 (line 18)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d121: movapd %xmm2,%xmm0
+  0x00007f694140d125: mulsd  0x18(%r8),%xmm0
+  0x00007f694140d12b: movapd %xmm2,%xmm1
+  0x00007f694140d12f: mulsd  0x20(%r8),%xmm1
+  0x00007f694140d135: movsd  %xmm0,0x18(%r8)    ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@17 (line 19)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d13b: movsd  %xmm1,0x20(%r8)    ;*putfield z
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@27 (line 20)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d141: add    $0x4,%ebp          ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@21 (line 30)
+  0x00007f694140d144: cmp    %r10d,%ebp
+  0x00007f694140d147: jl     0x00007f694140d070
+  0x00007f694140d14d: cmp    %r9d,%ebp
+  0x00007f694140d150: jge    0x00007f694140d190
+  0x00007f694140d152: nop    
+  0x00007f694140d153: nop                       ;*aload_0
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@12 (line 32)
+  0x00007f694140d154: mov    0x10(%rbx,%rbp,4),%r11d  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@14 (line 32)
+  0x00007f694140d159: movapd %xmm2,%xmm0
+  0x00007f694140d15d: mulsd  0x10(%r11),%xmm0   ; implicit exception: dispatches to 0x00007f694140d1c5
+  0x00007f694140d163: movsd  %xmm0,0x10(%r11)   ;*putfield x
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@7 (line 18)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d169: movapd %xmm2,%xmm0
+  0x00007f694140d16d: mulsd  0x18(%r11),%xmm0
+  0x00007f694140d173: movapd %xmm2,%xmm1
+  0x00007f694140d177: mulsd  0x20(%r11),%xmm1
+  0x00007f694140d17d: movsd  %xmm0,0x18(%r11)   ;*putfield y
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@17 (line 19)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d183: movsd  %xmm1,0x20(%r11)   ;*putfield z
+                                                ; - com.altdevblogaday.dodinjava.Vector::multiply@27 (line 20)
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+  0x00007f694140d189: inc    %ebp               ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@21 (line 30)
+  0x00007f694140d18b: cmp    %r9d,%ebp
+  0x00007f694140d18e: jl     0x00007f694140d154  ;*iload_3
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@6 (line 30)
+  0x00007f694140d190: add    $0x20,%rsp
+  0x00007f694140d194: pop    %rbp
+  0x00007f694140d195: test   %eax,0x5ca6e65(%rip)        # 0x00007f69470b4000
+                                                ;   {poll_return}
+  0x00007f694140d19b: retq   
+  0x00007f694140d19c: mov    $0xffffff86,%esi
+  0x00007f694140d1a1: mov    %rbx,(%rsp)
+  0x00007f694140d1a5: nop    
+  0x00007f694140d1a6: nop    
+  0x00007f694140d1a7: callq  0x00007f69413e3ea0  ; OopMap{[0]=Oop off=524}
+                                                ;*aload_0
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@12 (line 32)
+                                                ;   {runtime_call}
+  0x00007f694140d1ac: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140d1b1: mov    $0xffffffad,%esi
+  0x00007f694140d1b6: mov    %rbx,(%rsp)
+  0x00007f694140d1ba: nop    
+  0x00007f694140d1bb: callq  0x00007f69413e3ea0  ; OopMap{[0]=Oop off=544}
+                                                ;*iload_3
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@6 (line 30)
+                                                ;   {runtime_call}
+  0x00007f694140d1c0: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140d1c5: mov    $0xfffffff6,%esi
+  0x00007f694140d1ca: nop    
+  0x00007f694140d1cb: callq  0x00007f69413e3ea0  ; OopMap{off=560}
+                                                ;*invokevirtual multiply
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@18 (line 32)
+                                                ;   {runtime_call}
+  0x00007f694140d1d0: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140d1d5: mov    $0xfffffff6,%esi
+  0x00007f694140d1da: nop    
+  0x00007f694140d1db: callq  0x00007f69413e3ea0  ; OopMap{off=576}
+                                                ;*arraylength
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@8 (line 30)
+                                                ;   {runtime_call}
+  0x00007f694140d1e0: callq  0x00007f6945f2ade0  ;*aload_0
+                                                ; - com.altdevblogaday.dodinjava.OOP::multiply@12 (line 32)
+                                                ;   {runtime_call}
+  0x00007f694140d1e5: hlt    
+  0x00007f694140d1e6: hlt    
+  0x00007f694140d1e7: hlt    
+  0x00007f694140d1e8: hlt    
+  0x00007f694140d1e9: hlt    
+  0x00007f694140d1ea: hlt    
+  0x00007f694140d1eb: hlt    
+  0x00007f694140d1ec: hlt    
+  0x00007f694140d1ed: hlt    
+  0x00007f694140d1ee: hlt    
+  0x00007f694140d1ef: hlt    
+  0x00007f694140d1f0: hlt    
+  0x00007f694140d1f1: hlt    
+  0x00007f694140d1f2: hlt    
+  0x00007f694140d1f3: hlt    
+  0x00007f694140d1f4: hlt    
+  0x00007f694140d1f5: hlt    
+  0x00007f694140d1f6: hlt    
+  0x00007f694140d1f7: hlt    
+  0x00007f694140d1f8: hlt    
+  0x00007f694140d1f9: hlt    
+  0x00007f694140d1fa: hlt    
+  0x00007f694140d1fb: hlt    
+  0x00007f694140d1fc: hlt    
+  0x00007f694140d1fd: hlt    
+  0x00007f694140d1fe: hlt    
+  0x00007f694140d1ff: hlt    
+[Exception Handler]
+[Stub Code]
+  0x00007f694140d200: jmpq   0x00007f69413f3720  ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f694140d205: callq  0x00007f694140d20a
+  0x00007f694140d20a: subq   $0x5,(%rsp)
+  0x00007f694140d20f: jmpq   0x00007f69413e57e0  ;   {runtime_call}
+  0x00007f694140d214: int3   
+  0x00007f694140d215: int3   
+  0x00007f694140d216: int3   
+  0x00007f694140d217: int3   
+Decoding compiled method 0x00007f694140ac10:
+Code:
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Constants]
+  # {method} 'total' '()D' in 'com/altdevblogaday/dodinjava/Vector'
+  #           [sp+0x20]  (sp of caller)
+  0x00007f694140ad60: mov    0x8(%rsi),%r10d
+  0x00007f694140ad64: cmp    %r10,%rax
+  0x00007f694140ad67: jne    0x00007f69413e4620  ;   {runtime_call}
+  0x00007f694140ad6d: nop    
+  0x00007f694140ad6e: nop    
+  0x00007f694140ad6f: nop    
+[Verified Entry Point]
+  0x00007f694140ad70: push   %rbp
+  0x00007f694140ad71: sub    $0x10,%rsp
+  0x00007f694140ad75: nop                       ;*synchronization entry
+                                                ; - com.altdevblogaday.dodinjava.Vector::total@-1 (line 25)
+  0x00007f694140ad76: movsd  0x18(%rsi),%xmm0
+  0x00007f694140ad7b: addsd  0x10(%rsi),%xmm0
+  0x00007f694140ad80: addsd  0x20(%rsi),%xmm0   ;*dadd
+                                                ; - com.altdevblogaday.dodinjava.Vector::total@13 (line 25)
+  0x00007f694140ad85: add    $0x10,%rsp
+  0x00007f694140ad89: pop    %rbp
+  0x00007f694140ad8a: test   %eax,0x5ca9270(%rip)        # 0x00007f69470b4000
+                                                ;   {poll_return}
+  0x00007f694140ad90: retq   
+  0x00007f694140ad91: hlt    
+  0x00007f694140ad92: hlt    
+  0x00007f694140ad93: hlt    
+  0x00007f694140ad94: hlt    
+  0x00007f694140ad95: hlt    
+  0x00007f694140ad96: hlt    
+  0x00007f694140ad97: hlt    
+  0x00007f694140ad98: hlt    
+  0x00007f694140ad99: hlt    
+  0x00007f694140ad9a: hlt    
+  0x00007f694140ad9b: hlt    
+  0x00007f694140ad9c: hlt    
+  0x00007f694140ad9d: hlt    
+  0x00007f694140ad9e: hlt    
+  0x00007f694140ad9f: hlt    
+[Exception Handler]
+[Stub Code]
+  0x00007f694140ada0: jmpq   0x00007f69413f3720  ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f694140ada5: callq  0x00007f694140adaa
+  0x00007f694140adaa: subq   $0x5,(%rsp)
+  0x00007f694140adaf: jmpq   0x00007f69413e57e0  ;   {runtime_call}
+  0x00007f694140adb4: int3   
+  0x00007f694140adb5: int3   
+  0x00007f694140adb6: int3   
+  0x00007f694140adb7: int3   
+Decoding compiled method 0x00007f694140a650:
+Code:
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Verified Entry Point]
+[Constants]
+  # {method} 'total' '([Lcom/altdevblogaday/dodinjava/Vector;)D' in 'com/altdevblogaday/dodinjava/OOP'
+  0x00007f694140a7a0: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140a7a5: nop    
+  0x00007f694140a7a6: nop    
+  0x00007f694140a7a7: nop    
+  0x00007f694140a7a8: nop    
+  0x00007f694140a7a9: nop    
+  0x00007f694140a7aa: nop    
+  0x00007f694140a7ab: nop    
+  0x00007f694140a7ac: nop    
+  0x00007f694140a7ad: nop    
+  0x00007f694140a7ae: nop    
+  0x00007f694140a7af: nop    
+  0x00007f694140a7b0: mov    %eax,-0x8000(%rsp)
+  0x00007f694140a7b7: push   %rbp
+  0x00007f694140a7b8: sub    $0x20,%rsp
+  0x00007f694140a7bc: rex mov    (%rsi),%ebp
+  0x00007f694140a7bf: mov    0x18(%rsi),%rbx
+  0x00007f694140a7c3: movsd  0x8(%rsi),%xmm0
+  0x00007f694140a7c8: movsd  %xmm0,0x8(%rsp)
+  0x00007f694140a7ce: mov    %rsi,%rdi
+  0x00007f694140a7d1: mov    $0x7f6946017be0,%r10
+  0x00007f694140a7db: callq  *%r10
+  0x00007f694140a7de: mov    0x8(%rbx),%r10d    ; implicit exception: dispatches to 0x00007f694140a959
+  0x00007f694140a7e2: cmp    $0xbd2b7310,%r10d  ;   {oop('com/altdevblogaday/dodinjava/Vector'[])}
+  0x00007f694140a7e9: jne    0x00007f694140a935  ;*iload_3
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@4 (line 20)
+  0x00007f694140a7ef: mov    0xc(%rbx),%ecx     ;*arraylength
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@6 (line 20)
+  0x00007f694140a7f2: cmp    %ecx,%ebp
+  0x00007f694140a7f4: jge    0x00007f694140a919  ;*if_icmpge
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@7 (line 20)
+  0x00007f694140a7fa: cmp    %ecx,%ebp
+  0x00007f694140a7fc: jae    0x00007f694140a921
+  0x00007f694140a802: mov    %ecx,%r10d
+  0x00007f694140a805: dec    %r10d
+  0x00007f694140a808: cmp    %ecx,%r10d
+  0x00007f694140a80b: jae    0x00007f694140a921
+  0x00007f694140a811: mov    %ebp,%r11d
+  0x00007f694140a814: inc    %r11d              ;*dload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@10 (line 22)
+  0x00007f694140a817: mov    0x10(%rbx,%rbp,4),%r8d  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@13 (line 22)
+  0x00007f694140a81c: movsd  0x10(%r8),%xmm0    ; implicit exception: dispatches to 0x00007f694140a949
+  0x00007f694140a822: addsd  0x18(%r8),%xmm0
+  0x00007f694140a828: addsd  0x20(%r8),%xmm0
+  0x00007f694140a82e: movsd  0x8(%rsp),%xmm4
+  0x00007f694140a834: addsd  %xmm0,%xmm4        ;*dadd
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@17 (line 22)
+  0x00007f694140a838: inc    %ebp               ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@19 (line 20)
+  0x00007f694140a83a: cmp    %r11d,%ebp
+  0x00007f694140a83d: jge    0x00007f694140a847
+  0x00007f694140a83f: movsd  %xmm4,0x8(%rsp)
+  0x00007f694140a845: jmp    0x00007f694140a817
+  0x00007f694140a847: mov    %ecx,%r10d
+  0x00007f694140a84a: sub    %ebp,%r10d
+  0x00007f694140a84d: and    $0xfffffffffffffffc,%r10d
+  0x00007f694140a851: add    %ebp,%r10d
+  0x00007f694140a854: cmp    %r10d,%ebp
+  0x00007f694140a857: jl     0x00007f694140a874
+  0x00007f694140a859: movapd %xmm4,%xmm0
+  0x00007f694140a85d: jmpq   0x00007f694140a8e5
+  0x00007f694140a862: nop    
+  0x00007f694140a863: nop    
+  0x00007f694140a864: nop    
+  0x00007f694140a865: nop    
+  0x00007f694140a866: nop    
+  0x00007f694140a867: nop    
+  0x00007f694140a868: nop    
+  0x00007f694140a869: nop    
+  0x00007f694140a86a: nop    
+  0x00007f694140a86b: nop    
+  0x00007f694140a86c: nop    
+  0x00007f694140a86d: nop    
+  0x00007f694140a86e: nop    
+  0x00007f694140a86f: nop    
+  0x00007f694140a870: movapd %xmm0,%xmm4        ;*dload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@10 (line 22)
+  0x00007f694140a874: mov    0x10(%rbx,%rbp,4),%r8d
+  0x00007f694140a879: movsd  0x10(%r8),%xmm1    ; implicit exception: dispatches to 0x00007f694140a949
+  0x00007f694140a87f: movslq %ebp,%r11
+  0x00007f694140a882: mov    0x14(%rbx,%r11,4),%r9d
+  0x00007f694140a887: movsd  0x10(%r9),%xmm2    ; implicit exception: dispatches to 0x00007f694140a949
+  0x00007f694140a88d: mov    0x18(%rbx,%r11,4),%edi
+  0x00007f694140a892: movsd  0x10(%rdi),%xmm3   ; implicit exception: dispatches to 0x00007f694140a949
+  0x00007f694140a897: mov    0x1c(%rbx,%r11,4),%edx  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@13 (line 22)
+  0x00007f694140a89c: movsd  0x18(%rdx),%xmm0   ; implicit exception: dispatches to 0x00007f694140a949
+  0x00007f694140a8a1: addsd  0x10(%rdx),%xmm0
+  0x00007f694140a8a6: addsd  0x18(%rdi),%xmm3
+  0x00007f694140a8ab: addsd  0x20(%rdx),%xmm0
+  0x00007f694140a8b0: addsd  0x20(%rdi),%xmm3
+  0x00007f694140a8b5: addsd  0x18(%r8),%xmm1
+  0x00007f694140a8bb: addsd  0x18(%r9),%xmm2
+  0x00007f694140a8c1: addsd  0x20(%r8),%xmm1
+  0x00007f694140a8c7: addsd  0x20(%r9),%xmm2
+  0x00007f694140a8cd: addsd  %xmm4,%xmm1
+  0x00007f694140a8d1: addsd  %xmm1,%xmm2
+  0x00007f694140a8d5: addsd  %xmm2,%xmm3
+  0x00007f694140a8d9: addsd  %xmm3,%xmm0        ;*dadd
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@17 (line 22)
+  0x00007f694140a8dd: add    $0x4,%ebp          ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@19 (line 20)
+  0x00007f694140a8e0: cmp    %r10d,%ebp
+  0x00007f694140a8e3: jl     0x00007f694140a870
+  0x00007f694140a8e5: cmp    %ecx,%ebp
+  0x00007f694140a8e7: jge    0x00007f694140a90d
+  0x00007f694140a8e9: nop    
+  0x00007f694140a8ea: nop    
+  0x00007f694140a8eb: nop                       ;*dload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@10 (line 22)
+  0x00007f694140a8ec: mov    0x10(%rbx,%rbp,4),%r11d  ;*aaload
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@13 (line 22)
+  0x00007f694140a8f1: movsd  0x10(%r11),%xmm1   ; implicit exception: dispatches to 0x00007f694140a949
+  0x00007f694140a8f7: addsd  0x18(%r11),%xmm1
+  0x00007f694140a8fd: addsd  0x20(%r11),%xmm1
+  0x00007f694140a903: addsd  %xmm1,%xmm0        ;*dadd
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@17 (line 22)
+  0x00007f694140a907: inc    %ebp               ;*iinc
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@19 (line 20)
+  0x00007f694140a909: cmp    %ecx,%ebp
+  0x00007f694140a90b: jl     0x00007f694140a8ec  ;*iload_3
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@4 (line 20)
+  0x00007f694140a90d: add    $0x20,%rsp
+  0x00007f694140a911: pop    %rbp
+  0x00007f694140a912: test   %eax,0x5ca96e8(%rip)        # 0x00007f69470b4000
+                                                ;   {poll_return}
+  0x00007f694140a918: retq   
+  0x00007f694140a919: movsd  0x8(%rsp),%xmm0
+  0x00007f694140a91f: jmp    0x00007f694140a90d
+  0x00007f694140a921: mov    $0xffffff86,%esi
+  0x00007f694140a926: mov    %rbx,(%rsp)
+  0x00007f694140a92a: nop    
+  0x00007f694140a92b: callq  0x00007f69413e3ea0  ; OopMap{[0]=Oop off=400}
+                                                ;*dload_1
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@10 (line 22)
+                                                ;   {runtime_call}
+  0x00007f694140a930: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140a935: mov    $0xffffffad,%esi
+  0x00007f694140a93a: mov    %rbx,(%rsp)
+  0x00007f694140a93e: nop    
+  0x00007f694140a93f: callq  0x00007f69413e3ea0  ; OopMap{[0]=Oop off=420}
+                                                ;*iload_3
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@4 (line 20)
+                                                ;   {runtime_call}
+  0x00007f694140a944: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140a949: mov    $0xfffffff6,%esi
+  0x00007f694140a94e: nop    
+  0x00007f694140a94f: callq  0x00007f69413e3ea0  ; OopMap{off=436}
+                                                ;*invokevirtual total
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@14 (line 22)
+                                                ;   {runtime_call}
+  0x00007f694140a954: callq  0x00007f6945f2ade0  ;   {runtime_call}
+  0x00007f694140a959: mov    $0xfffffff6,%esi
+  0x00007f694140a95e: nop    
+  0x00007f694140a95f: callq  0x00007f69413e3ea0  ; OopMap{off=452}
+                                                ;*arraylength
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@6 (line 20)
+                                                ;   {runtime_call}
+  0x00007f694140a964: callq  0x00007f6945f2ade0  ;*arraylength
+                                                ; - com.altdevblogaday.dodinjava.OOP::total@6 (line 20)
+                                                ;   {runtime_call}
+  0x00007f694140a969: hlt    
+  0x00007f694140a96a: hlt    
+  0x00007f694140a96b: hlt    
+  0x00007f694140a96c: hlt    
+  0x00007f694140a96d: hlt    
+  0x00007f694140a96e: hlt    
+  0x00007f694140a96f: hlt    
+  0x00007f694140a970: hlt    
+  0x00007f694140a971: hlt    
+  0x00007f694140a972: hlt    
+  0x00007f694140a973: hlt    
+  0x00007f694140a974: hlt    
+  0x00007f694140a975: hlt    
+  0x00007f694140a976: hlt    
+  0x00007f694140a977: hlt    
+  0x00007f694140a978: hlt    
+  0x00007f694140a979: hlt    
+  0x00007f694140a97a: hlt    
+  0x00007f694140a97b: hlt    
+  0x00007f694140a97c: hlt    
+  0x00007f694140a97d: hlt    
+  0x00007f694140a97e: hlt    
+  0x00007f694140a97f: hlt    
+[Exception Handler]
+[Stub Code]
+  0x00007f694140a980: jmpq   0x00007f69413f3720  ;   {no_reloc}
+[Deopt Handler Code]
+  0x00007f694140a985: callq  0x00007f694140a98a
+  0x00007f694140a98a: subq   $0x5,(%rsp)
+  0x00007f694140a98f: jmpq   0x00007f69413e57e0  ;   {runtime_call}
+  0x00007f694140a994: int3   
+  0x00007f694140a995: int3   
+  0x00007f694140a996: int3   
+  0x00007f694140a997: int3   
+1480000.000002716
+
